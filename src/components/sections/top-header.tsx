@@ -3,6 +3,7 @@
 import { Bell, Menu, Search } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { TestConnectButton } from "../layout/TestConnectButton";
 
 interface TopHeaderProps {
   onMenuClick?: () => void;
@@ -45,7 +46,7 @@ const TopHeader = ({ onMenuClick }: TopHeaderProps) => {
               </Button>
             </div>
 
-            <Button
+            {/* <Button
               variant="outline"
               className="h-8 rounded-md border-muted-foreground bg-card px-3 text-sm font-bold text-foreground transition-all hover:bg-accent sm:h-9 sm:rounded-lg sm:px-4"
             >
@@ -56,7 +57,8 @@ const TopHeader = ({ onMenuClick }: TopHeaderProps) => {
               className="hidden h-9 rounded-lg bg-[#FBBF24] px-4 text-sm font-bold text-foreground hover:bg-[#F59E0B] sm:inline-flex"
             >
               Sign up
-            </Button>
+            </Button> */}
+            <TestConnectButton/>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import './globals.css';
 import React from 'react';
+import { ThirdwebProvider } from 'thirdweb/react';
 
 const nunito = Nunito({
   subsets: ['latin'],
@@ -28,7 +29,11 @@ export default function RootLayout({
       <body
         className={`flex h-dvh w-full bg-background text-foreground antialiased ${nunito.variable}`}
       >
-        {children}
+            <ThirdwebProvider>
+
+              {children}
+
+              </ThirdwebProvider>
       </body>
     </html>
   );
